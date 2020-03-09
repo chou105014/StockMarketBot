@@ -1,7 +1,7 @@
 from datetime import timedelta, datetime
 from imgurpython import ImgurClient
 from matplotlib.font_manager import FontProperties
-import twstock, time, matplotlib
+import twstock, time, matplotlib, configparser
 import matplotlib.pyplot as plt
 import pandas as pd
 #fontprop = FontProperties(fname = ".fonts/DejaVuSans.ttf")
