@@ -14,9 +14,9 @@ config = configparser.ConfigParser()
 config.read("config.ini")
 
 # Channel Access Token
-line_bot_api = LineBotApi(config["LINE"]["ACCESS_TOKEN"])
+line_bot_api = LineBotApi(config.get("LINE", "ACCESS_TOKEN"))
 # Channel Secret
-handler = WebhookHandler(config["LINE"]["SECRET"])
+handler = WebhookHandler(config.get("LINE", "SECRET"))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=["POST"])
